@@ -29,9 +29,7 @@ class FileUploadViewTest(TestCase):
     def test_single_word_upload(self):
         with open('single_word_file.txt', 'w') as single_word_file:
             single_word_file.write('Single')
-
         with open('single_word_file.txt', 'rb') as single_word_file:
             response = self.client.post(reverse('files:file_upload'), {'file': single_word_file})
-
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'texts/display.html')
