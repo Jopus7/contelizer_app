@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'text_processing.apps.TextProcessingConfig',
+    'pesel.apps.PeselConfig',
 ]
 
 MIDDLEWARE = [
