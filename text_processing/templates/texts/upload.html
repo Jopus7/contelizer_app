@@ -1,11 +1,12 @@
 {% extends 'base.html' %}
 
-{% block title %}Przekształć tekst{% endblock %}
+{% block title %}Transform text{% endblock %}
 
 {% block content %}
-<h1>Przekształć tekst</h1>
- <form method="POST" enctype="multipart/form-data">    {{ form.as_p }}
+<h1>Transform text</h1>
+ <form method="POST" enctype="multipart/form-data">
     {% csrf_token %}
-    <input type="submit" value="Przekształć">
+     {{ form.as_p }}
+    <input type="submit" value="Transform">
 </form>
 {% endblock %}
